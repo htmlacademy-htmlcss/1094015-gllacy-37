@@ -1,0 +1,728 @@
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Inter";
+
+  font-display: swap;
+  src: url("../fonts/inter-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Inter";
+
+  font-display: swap;
+  src: url("../fonts/inter-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 900;
+  font-family: "Inter";
+
+  font-display: swap;
+  src: url("../fonts/inter-900.woff2") format("woff2");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 1170px;
+  height: 100%;
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "Inter", sans-serif;
+  color: #2d3440;
+
+  background-color: #feafc3;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.button {
+  position: relative;
+  z-index: 1;
+
+  display: inline-block;
+  padding: 12px 32px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  text-decoration: none;
+
+  border-radius: 26px;
+  cursor: pointer;
+}
+
+/* Состояния кнопки */
+
+.button-dark {
+  color: #fcfcfc;
+
+  background-color: #ff2f64;
+}
+
+/* Состояния кнопки */
+
+.button-light {
+  color: #2d3440;
+
+  background-color: #fcfcfc;
+}
+
+/* Состояния кнопки */
+
+.title {
+  margin: 0;
+
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 46px;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+/* Шапка */
+
+.navigation {
+  display: flex;
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 575px;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-link {
+  display: block;
+  padding: 42px 16px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  color: #2d3440;
+  text-decoration: none;
+
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+.logo-header {
+  display: flex;
+  align-items: center;
+  width: 137px;
+  padding: 24px 16px 24px 0;
+}
+
+.navigation-user {
+  max-width: 431px;
+  margin-left: auto;
+}
+
+.navigation-user .navigation-link {
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.navigation-link-tel {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.navigation-link-search {
+  background-image: url(../images/svg/header/search.svg);
+}
+
+.navigation-link-entrance {
+  background-image: url(../images/svg/header/entrance.svg);
+}
+
+.navigation-link-basket {
+  background-image: url(../images/svg/header/basket.svg);
+}
+
+/* Главная страница  */
+
+.slider-active {
+  display: grid;
+
+  grid-template-columns: 470px 327px 1fr 1fr;
+}
+
+.slider-title {
+  margin: 136px 0 24px 70px;
+
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 46px;
+  font-family: "Inter", sans-serif;
+}
+
+.slider-description {
+  margin: 0 26px 48px 70px;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Inter", sans-serif;
+}
+
+.slider-button {
+  margin: 0 316px 138px 70px;
+}
+
+.slider-images {
+  height: 507px;
+  margin: 0;
+}
+
+.action-block {
+  margin-bottom: 80px;
+}
+
+.block-title {
+  margin-bottom: 55px;
+}
+
+.action-block-container {
+  display: grid;
+
+  grid-column-gap: 30px;
+  grid-template-columns: 570px 570px;
+}
+
+.block-container {
+  background-color: #ff7799;
+  background-repeat: no-repeat;
+  background-position: center right;
+  border-radius: 16px;
+}
+
+.block-container-promo-one {
+  background-image: url(../images/svg/action/action-1.svg);
+}
+
+.block-container-promo-two {
+  background-image: url(../images/svg/action/action-2.svg);
+}
+
+.blog-container-promo {
+  width: 317px;
+}
+
+.block-container-title {
+  margin: 36px 0 28px 36px;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  font-family: "Inter", sans-serif;
+}
+
+.block-container-description {
+  margin: 0 0 28px 36px;
+}
+
+.block-button {
+  margin: 0 0 36px 36px;
+}
+
+/* Популярные вкусы */
+
+.popular-product {
+  margin-bottom: 80px;
+}
+
+.popular-title {
+  margin-bottom: 55px;
+}
+
+.popular-product-container {
+  display: grid;
+
+  grid-column-gap: 30px;
+  grid-template-columns: repeat(4, 270px);
+}
+
+.product-container {
+  background-color: #fcfcfc;
+  border-radius: 8px;
+}
+
+.product-container-title {
+  display: block;
+  width: 190px;
+  margin: 0 40px 8px 40px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  color: #2d3440;
+  text-decoration: none;
+}
+
+.product-container-description {
+  display: block;
+  width: 190px;
+  margin: 0 40px 16px 40px;
+
+  text-align: center;
+  color: #565c66;
+}
+
+.product-container-basket {
+  display: flex;
+  justify-content: space-between;
+  width: 190px;
+  margin: 0 40px 24px 40px;
+}
+
+.product-price {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "Inter", sans-serif;
+  color: #2d3440;
+}
+
+/*
+Блок с информацией о товарах */
+
+.information-shop {
+  margin-bottom: 80px;
+  padding: 24px;
+
+  background-image: url(../images/png/waffle-background.png);
+  border-radius: 16px;
+}
+
+.information-shop-container {
+  padding: 56px 0;
+
+  background-color: #ffffff;
+  border-radius: 16px;
+}
+
+.information-title {
+  margin: 0 63px 56px 63px;
+}
+
+.information-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.information-description {
+  margin: 0 40px 40px 40px;
+
+  color: #565c66;
+}
+
+/* Блог */
+
+.blog-container {
+  display: grid;
+  margin-bottom: 80px;
+
+  grid-column-gap: 30px;
+  grid-template-columns: 570px 570px;
+}
+
+.blog-news {
+  margin: 0;
+  padding-top: 33px;
+  padding-bottom: 67px;
+  padding-left: 32px;
+
+  background-color: #ffffff;
+  border-radius: 16px;
+}
+
+.blog-news-title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Inter", sans-serif;
+  color: #565c66;
+}
+
+.blog-news-description {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  font-family: "Inter", sans-serif;
+  color: #2d3440;
+  text-decoration: none;
+}
+
+.blog-newsletter {
+  padding: 6px;
+
+  background-image: url(../images/png/postal-background.png);
+  border-radius: 16px;
+}
+
+.newsletter {
+  padding: 26px;
+
+  background-color: #ffffff;
+  border-radius: 16px;
+}
+
+.newsletter-title {
+  margin-top: 0;
+  margin-bottom: 42px;
+}
+
+.mailing-input {
+  width: 332px;
+  height: 48px;
+  margin-right: 14px;
+
+  border: 1px solid #b9b9b9;
+  border-radius: 4px;
+}
+
+/* Доставка */
+
+.delivery-container {
+  display: flex;
+  margin-bottom: 80px;
+  padding: 64px 64px 64px 100px;
+
+  background-color: #ff2f64;
+  border-radius: 16px;
+}
+
+.delivery-title {
+  margin-top: 103px;
+  margin-right: 150px;
+  margin-bottom: 24px;
+
+  text-align: left;
+}
+
+.delivery-description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "Inter", sans-serif;
+  color: #565c66;
+}
+
+.delivery-form {
+  display: block;
+  width: 500px;
+  height: 406px;
+  padding: 40px 40px 42px 40px;
+
+  background-color: #fcfcfc;
+  border-radius: 8px;
+}
+
+/* Контактная информация */
+.contacts {
+  padding: 64px 763px 64px 64px;
+
+  background-color: #2d3440;
+  border-radius: 16px;
+}
+
+.contacts-container {
+  width: 343px;
+  height: 364px;
+  padding: 40px;
+
+  background-color: #fcfcfc;
+  border-radius: 8px;
+}
+
+.contacts-title {
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  color: #565c66;
+}
+
+.contacts-description {
+  margin-top: 12px;
+  margin-bottom: 24px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "Inter", sans-serif;
+}
+
+.contacts-description-telephone {
+  margin: 0;
+}
+
+.contacts-information {
+  margin-top: 0;
+  margin-bottom: 32px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Inter", sans-serif;
+  color: #565c66;
+}
+
+/* Подвал */
+
+.main-footer {
+  display: grid;
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  gap: 0 259px;
+  grid-template-columns: 104px 1fr 193px;
+}
+
+.footer-social-list {
+  display: grid;
+  justify-content: center;
+
+  gap: 16px;
+  grid-template-columns: repeat(3, auto);
+}
+
+.social-button {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+
+  background-color: #fcfcfc;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.social-button-telegram::after {
+  -webkit-mask-image: url(../images/icons/telegram.svg);
+  mask-image: url(../images/icons/telegram.svg);
+}
+
+.main-footer-info {
+  display: grid;
+
+  grid-template-columns: repeat(2, auto);
+}
+
+.footer-info {
+  width: 150px;
+}
+
+.footer-info-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Inter", sans-serif;
+  color: #2d3440;
+  text-decoration: none;
+}
+
+.footer-info-text-like {
+  margin-right: 24px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Inter", sans-serif;
+  color: #2d3440;
+}
+
+.footer-documents {
+  width: 182px;
+}
+
+.footer-documents-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Inter", sans-serif;
+  color: #2d3440;
+  text-decoration: none;
+}
+
+.logo-footer {
+  margin-bottom: 14px;
+  padding: 0;
+
+  text-align: left;
+}
+
+.footer-navigation-link {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: "Inter", sans-serif;
+}
+
+.footer-href {
+  color: #2d3440;
+}
+
+/* Каталог  */
+
+.inner-container {
+  margin-bottom: 40px;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.breadcrumbs-item {
+  position: relative;
+
+  margin-right: 28px;
+}
+
+.breadcrumbs-item:not(:last-child):after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -21px;
+
+  width: 7px;
+  height: 6px;
+
+  background-image: url(../images/svg/breadcrumbs-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateY(-50%);
+}
+
+.breadcrumbs-link {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Inter", sans-serif;
+  color: #2d3440;
+  text-decoration: none;
+}
+
+.inner-title {
+  text-align: left;
+}
+
+/* Фильтр  */
+
+.catalog {
+  margin-bottom: 44px;
+}
+
+.product-list {
+  display: grid;
+  margin-bottom: 16px;
+
+  gap: 40px 30px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: right;
+  height: 126px;
+  padding: 41px 0;
+}
+
+.product-card-more {
+  margin-right: 335px;
+}
+
+.pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pagination-list-item {
+  width: 24px;
+  height: 24px;
+}
+
+.pagination-link {
+  padding: 2px 8px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Inter", sans-serif;
+  color: #2d3440;
+  text-decoration: none;
+}
+
+.pagination-link-current {
+  background-color: #fcfcfc;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
